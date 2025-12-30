@@ -28,18 +28,15 @@ h1, h2, h3, p {
     z-index: 1000;
 }
 
-
 /* ===== LOGO / TÍTULO ===== */
-.logo{
+.logo {
     text-align: center;
     font-size: 36px;
     margin: 0;
     color: #5a3e36;
 }
 
-
 /* ===== NAVEGACIÓN ===== */
-
 .nav-lista {
     list-style: none;
     padding: 0;
@@ -57,10 +54,9 @@ h1, h2, h3, p {
     transition: color 0.3s;
 }
 
-nav a:hover{
+.nav-lista a:hover {
     color: #a9745b;
 }
-
 
 /* ===== MAIN ===== */
 main {
@@ -69,35 +65,35 @@ main {
     padding: 0 20px;
 }
 
-
-
 /* ===== TEXTOS ===== */
-h2{
+h2 {
     text-align: center;
     text-transform: uppercase;
     margin: 30px 0 20px;
     color: #7b5e57;
 }
 
-p{
+p {
     font-size: 16px;
     line-height: 1.6;
     margin: 10px 0;
 }
 
 /* ===== CATÁLOGO ===== */
-.catalogo{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
+.catalogo {
+    display: flex;                  /* activa Flexbox */
+    justify-content: space-between; /* separa tarjetas uniformemente */
+    align-items: flex-start;        /* alinea al principio del eje cruzado */
+    flex-wrap: nowrap;              /* todas las tarjetas en una fila */
+    gap: 20px;                      /* espacio entre tarjetas */
+    margin-bottom: 40px;
 }
 
 /* ===== TARJETAS ===== */
-.producto-tarjeta{
+.producto-tarjeta {
     position: relative; 
-    width: 280px;
+    flex: 1 1 220px;  /* flex-grow | flex-shrink | flex-basis */
+    max-width: 280px;
     background-color: #f5f1ea;
     border-radius: 12px;
     text-align: center;
@@ -106,7 +102,7 @@ p{
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.producto-tarjeta:hover{
+.producto-tarjeta:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
@@ -123,18 +119,16 @@ p{
     font-size: 12px;
 }
 
-
 /* ===== IMÁGENES ===== */
-.producto-img{
+.producto-img {
     width: 100%;
     height: 240px;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
 }
 
-
 /* ===== TÍTULOS DE PRODUCTO ===== */
-.producto-titulo{
+.producto-titulo {
     font-size: 20px;
     font-weight: bold;
     color: #5a3e36;
@@ -142,14 +136,20 @@ p{
 }
 
 /* ===== DESCRIPCIÓN ===== */
-.producto-desc{
+.producto-desc {
     font-size: 14px;
     color: #7b5e57;
     margin-bottom: 10px;
 }
 
+/* ===== PRECIO ===== */
+.producto-precio {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 /* ===== BOTONES ===== */
-.producto-btn{
+.producto-btn {
     background-color: #a9745b;
     color: whitesmoke;
     border: none;
@@ -158,10 +158,9 @@ p{
     cursor: pointer;
     transition: background-color 0.3s;
     width: 90%;
-
 }
 
-.producto-btn:hover{
+.producto-btn:hover {
     background-color: #5a3e36;
 }
 
@@ -174,7 +173,6 @@ p{
     border: 1px solid #ccc;
     border-radius: 6px;
 }
-
 
 /* ===== BOTÓN FLOTANTE ===== */
 .boton-carrito {
