@@ -1,18 +1,33 @@
-/* ===== ESTILOS GENERALES ===== */
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #fef8f2;
+/* ===== ESTILOS GENERALES (HERENCIA) ===== */
+body {
     margin: 0;
-    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    background-color: #fef8f2;
     color: #5a3e36;
 }
 
-/* ===== HEADER ===== */
-header{
-    background-color: #e8d8c3;
-    padding: 20px 0;
+/* Todos los textos heredan color y fuente */
+h1, h2, h3, p {
+    margin: 0 0 10px;
 }
+
+/* ===== BANNER ===== */
+.top-banner {
+    background-color: #e8d8c3;
+    text-align: center;
+    padding: 1px 10px;
+    font-size: 14px;
+}
+
+/* ===== NAV ===== */
+.nav-principal {
+    background-color: #a9745b;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 
 /* ===== LOGO / TÍTULO ===== */
 .logo{
@@ -22,20 +37,22 @@ header{
     color: #5a3e36;
 }
 
+
 /* ===== NAVEGACIÓN ===== */
-nav ul{
+
+.nav-lista {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
     padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
     margin: 15px 0 0 0;
 }
 
-nav a{
+.nav-lista a {
     text-decoration: none;
-    color: #5a3e36;
-    font-weight: bold;
+    color: inherit; /* herencia */
+    font-weight: 500;
     font-size: 16px;
     transition: color 0.3s;
 }
@@ -43,6 +60,16 @@ nav a{
 nav a:hover{
     color: #a9745b;
 }
+
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
 
 /* ===== TEXTOS ===== */
 h2{
@@ -69,18 +96,33 @@ p{
 
 /* ===== TARJETAS ===== */
 .producto-tarjeta{
+    position: relative; 
     width: 280px;
     background-color: #f5f1ea;
     border-radius: 12px;
     text-align: center;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .producto-tarjeta:hover{
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+
+/* ===== BADGE ===== */
+.producto-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #a9745b;
+    color: #f5f1ea;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
 
 /* ===== IMÁGENES ===== */
 .producto-img{
@@ -89,6 +131,7 @@ p{
     object-fit: cover;
     border-radius: 12px 12px 0 0;
 }
+
 
 /* ===== TÍTULOS DE PRODUCTO ===== */
 .producto-titulo{
@@ -110,13 +153,52 @@ p{
     background-color: #a9745b;
     color: whitesmoke;
     border: none;
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 90%;
+
 }
 
 .producto-btn:hover{
     background-color: #5a3e36;
 }
 
+/* ===== FORMULARIO ===== */
+.form-contacto input,
+.form-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* ===== BOTÓN FLOTANTE ===== */
+.boton-carrito {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #f5f1ea;
+    color: #5a3e36;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.boton-carrito:hover {
+    background-color: #a9745b;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #e8d8c3;
+}

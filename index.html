@@ -3,51 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
     <title>Bean & CO</title>
 </head>
+    
+    
 <body>
-    <header>
 
-        <h1 class="logo">Bean & CO. ☕</h1>
-        <nav>
-            <li><a href="#Menu">Menú</a></li>
-            <li><a href="#Catalogo">Catálogo</a></li>
-            <li><a href="#Entregas">Entregas</a></li>
-        </nav>
+
+    <!-- Banner superior -->
+    <header class="top-banner">
+        <p>☕ Envíos gratis a partir de $899</p>
     </header>
+
+
+    <!-- Navegación (position: sticky) -->
+    <nav class="nav-principal">
+        <h1 class="logo">Bean & CO. ☕</h1>
+        <ul class="nav-lista">
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="catalogo">Catálogo</a></li>
+            <li><a href="#entregas">Entregas</a></li>
+            <li><a href="#about">Acerca de nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
 
     <main>
 
-        <!-- Catálogo -->
-        <section id="catalogo">
-            <h2>Productos destacados</h2>
+<!-- CATÁLOGO -->
+<section id="catalogo">
+    <h2>Nuestros productos</h2>
 
-            <div class="producto-tarjeta">
-                <img src="https://i.pinimg.com/474x/e4/8d/68/e48d6894460dc60e0200aa5ea9b03307.jpg" alt="Café espresso" class="producto-img">
-                <h3 class="producto-titulo">Café Espresso</h3>
-                <p class="producto-desc">Intenso y aromático, preparado con granos seleccionados.</p>
-                <button class="producto-btn">Agregar al carrito</button>
-            </div>
+    <div class="producto-tarjeta">
+        <span class="producto-badge">Oferta</span>
+        <img src="img/cafe.jpg" alt="Café artesanal" class="producto-img">
+        <h3 class="producto-titulo">Café artesanal</h3>
+        <p class="producto-desc">Mezcla premium de granos seleccionados con aroma intenso.</p>
+        <p class="producto-precio">$120 MXN</p>
+        <button class="producto-btn">Agregar al carrito</button>
+    </div>
 
-            <div class="producto-tarjeta">
-                <img src="https://lazenskakava.s24.cdn-upgates.com/_cache/7/8/783a1c5d3016cf990d9515cb6c4b220f-latte-art-rosetta.jpg
-            " alt="Latte art" class="producto-img">
-                <h3 class="producto-titulo">Latte Art</h3>
-                <p class="producto-desc">Deliciosa bebida de café con leche y espuma artística.</p>
-                <button class="producto-btn">Agregar al carrito</button>
-            </div>
+    <div class="producto-tarjeta">
+        <img src="https://i.pinimg.com/474x/e4/8d/68/e48d6894460dc60e0200aa5ea9b03307.jpg" alt="Café espresso" class="producto-img">
+        <h3 class="producto-titulo">Café Espresso</h3>
+        <p class="producto-desc">Intenso y aromático, preparado con granos seleccionados.</p>
+        <p class="producto-precio">$85 MXN</p>
+        <button class="producto-btn">Agregar al carrito</button>
+    </div>
 
-            <div class="producto-tarjeta">
-                <img src="https://www.letifly.com/cdn/shop/files/Rustic-Ceramic-Coffee-Mug-Saucer-Set.webp?v=1741171582"alt="Taza de café" class="producto-img">
-                <h3 class="producto-titulo">Taza personalizada</h3>
-                <p class="producto-desc">Taza de cerámica con diseño único, ideal para tu café.</p>
-                <button class="producto-btn">Agregar al carrito</button>
-            </div>
+    <div class="producto-tarjeta">
+        <img src="https://lazenskakava.s24.cdn-upgates.com/_cache/7/8/783a1c5d3016cf990d9515cb6c4b220f-latte-art-rosetta.jpg" alt="Latte art" class="producto-img">
+        <h3 class="producto-titulo">Latte Art</h3>
+        <p class="producto-desc">Deliciosa bebida de café con leche y espuma artística.</p>
+        <p class="producto-precio">$145 MXN</p>
+        <button class="producto-btn">Agregar al carrito</button>
+    </div>
 
+    <div class="producto-tarjeta">
+        <img src="https://www.letifly.com/cdn/shop/files/Rustic-Ceramic-Coffee-Mug-Saucer-Set.webp?v=1741171582"alt="Taza de café" class="producto-img">
+        <h3 class="producto-titulo">Taza personalizada</h3>
+        <p class="producto-desc">Taza de cerámica con diseño único, ideal para tu café.</p>
+        <p class="producto-precio">$455 MXN</p>
+        <button class="producto-btn">Agregar al carrito</button>
+    </div>
+
+</section>
+
+
+    <!-- CONTACTO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form class="form-contacto">
+        <input type="text" placeholder="Nombre">
+        <input type="email" placeholder="Correo">
+        <textarea placeholder="Mensaje"></textarea>
+            </form>
         </section>
 
-        <!-- Entregas -->
+    <!-- ENTREGAS -->
         <section id="entregas">
             <h2>Entregas y envíos</h2>
             <p>Recibe tu café y accesorios directo en tu casa:</p>
@@ -56,13 +99,18 @@
                 <li><strong>Envíos express:</strong> 1 a 2 días hábiles en CDMX.</li>
                 <li><strong>Entrega local:</strong> Retira en nuestra tienda sin costo adicional.</li>
 
+                
             </ul>
         </section>
     </main>
 
+
+    <!-- Botón flotante (position: fixed) -->
+    <a href="#catalogo" class="boton-carrito">🛒 Ver carrito</a>
+
+
     <footer>
-        <p>&copy; 2025 Bean & CO. </p>
-        
+    <p>&copy; 2025 Bean & CO. </p>
     </footer>
 </body>
 </html>
