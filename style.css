@@ -263,19 +263,39 @@ footer {
     background-color: #e8d8c3;
 }
 
+
 /* === DISEÑO RESPONSIVO === */
 
+/* == TABLET == */
 @media screen and (max-width: 1024px){
 
-    .top-banner{
-        font-size: 12px;
-        padding: 8px 12px;
+    .logo{
+        font-size: 24px;
+        
     }
 
+    .nav-lista{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .producto-img{
+        height: 220px;
+    }
+
+    .equipo-card{
+        width: 260px;
+    }
+}
+
+
+/* == MÓVIL == */
+@media screen and (max-width: 600px){
+
+    /* NAV */
     .nav-principal{
-        justify-content: center;
+        padding: 10px;
         gap: 12px;
-        padding: 12px 16px;
     }
 
     .logo{
@@ -285,18 +305,35 @@ footer {
     }
 
     .nav-lista{
-        width:100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 16px;
-
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
     }
 
-    .producto-tarjetal{
-        flex: 1 1 260px;
+    /* CATÁLOGO */
+    .producto-img{
+        height: 180px;
+    }
+
+    .producto-btn{
+        width: 100%;
+    }
+
+    /* EQUIPO */
+    .equipo-contenedor{
+        margin-top: 40px;
     }
 
     .equipo-card{
-        width: 260px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* BOTÓN FLOTANTE */
+    .boton-carrito{
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 14px;
     }
 }
